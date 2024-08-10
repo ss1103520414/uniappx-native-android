@@ -6,6 +6,7 @@ pluginManagement {
 		google()
 		mavenCentral()
 		gradlePluginPortal()
+		maven { url 'https://mvn.getui.com/nexus/content/repositories/releases' }
 	}
 }
 dependencyResolutionManagement {
@@ -14,11 +15,13 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
+		maven { url 'https://mvn.getui.com/nexus/content/repositories/releases' }
         flatDir {
             dirs('./plugins/')
         }
     }
 }
-rootProject.name = "debug-kux-pack-app"
+rootProject.name = "kux-audio-player-app"
 include ':app'
 include ':uniappx'
+include ':kux-audio-player'

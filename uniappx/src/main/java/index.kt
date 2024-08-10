@@ -1,5 +1,7 @@
 @file:Suppress("UNCHECKED_CAST", "USELESS_CAST", "INAPPLICABLE_JVM_NAME")
-package uni.UNI3B5CA8D;
+package uni.UNI64B44D4;
+import android.graphics.Color;
+import android.view.View;
 import io.dcloud.uniapp.*;
 import io.dcloud.uniapp.extapi.*;
 import io.dcloud.uniapp.framework.*;
@@ -60,7 +62,7 @@ open class GenApp : BaseApp {
             }
         val styles0: Map<String, Map<String, Map<String, Any>>>
             get() {
-                return utsMapOf("uni-row" to padStyleMapOf(utsMapOf("flexDirection" to "row")), "uni-column" to padStyleMapOf(utsMapOf("flexDirection" to "column")));
+                return utsMapOf("uni-row" to padStyleMapOf(utsMapOf("flexDirection" to "row")), "uni-column" to padStyleMapOf(utsMapOf("flexDirection" to "column")), "p-3" to padStyleMapOf(utsMapOf("paddingTop" to 30, "paddingRight" to 30, "paddingBottom" to 30, "paddingLeft" to 30)), "mt-2" to padStyleMapOf(utsMapOf("marginTop" to 20)), "mt-3" to padStyleMapOf(utsMapOf("marginTop" to 30)), "mr-3" to padStyleMapOf(utsMapOf("marginRight" to 30)), "flex" to padStyleMapOf(utsMapOf("display" to "flex")), "flex-row" to padStyleMapOf(utsMapOf("flexDirection" to "row")));
             }
     }
 }
@@ -71,67 +73,25 @@ val GenAppClass = CreateVueAppComponent(GenApp::class.java, fun(): VueComponentO
     return GenApp(instance);
 }
 );
-open class User (
-    @JsonNotNull
-    open var name: String,
-    @JsonNotNull
-    open var age: Number,
-) : UTSReactiveObject() {
-    override fun __v_create(__v_isReadonly: Boolean, __v_isShallow: Boolean, __v_skip: Boolean): UTSReactiveObject {
-        return UserReactiveObject(this, __v_isReadonly, __v_isShallow, __v_skip)
-    }
+fun hideBottomBar() {
+    UTSAndroid.getUniActivity()!!.getWindow()!!.getDecorView()!!.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+    UTSAndroid.getUniActivity()!!.getWindow()!!.setNavigationBarColor(Color.TRANSPARENT);
 }
-open class UserReactiveObject : User, IUTSReactive<User> {
-    override var __v_raw: User;
-    override var __v_isReadonly: Boolean;
-    override var __v_isShallow: Boolean;
-    override var __v_skip: Boolean;
-    constructor(__v_raw: User, __v_isReadonly: Boolean, __v_isShallow: Boolean, __v_skip: Boolean) : super(name = __v_raw.name, age = __v_raw.age) {
-        this.__v_raw = __v_raw;
-        this.__v_isReadonly = __v_isReadonly;
-        this.__v_isShallow = __v_isShallow;
-        this.__v_skip = __v_skip;
-    }
-    override fun __v_clone(__v_isReadonly: Boolean, __v_isShallow: Boolean, __v_skip: Boolean): UserReactiveObject {
-        return UserReactiveObject(this.__v_raw, __v_isReadonly, __v_isShallow, __v_skip);
-    }
-    override var name: String
-        get() {
-            return trackReactiveGet(__v_raw, "name", __v_raw.name, this.__v_isReadonly, this.__v_isShallow);
-        }
-        set(value) {
-            if (!this.__v_canSet("name")) {
-                return;
-            }
-            val oldValue = __v_raw.name;
-            __v_raw.name = value;
-            triggerReactiveSet(__v_raw, "name", oldValue, value);
-        }
-    override var age: Number
-        get() {
-            return trackReactiveGet(__v_raw, "age", __v_raw.age, this.__v_isReadonly, this.__v_isShallow);
-        }
-        set(value) {
-            if (!this.__v_canSet("age")) {
-                return;
-            }
-            val oldValue = __v_raw.age;
-            __v_raw.age = value;
-            triggerReactiveSet(__v_raw, "age", oldValue, value);
-        }
-}
-val GenUniModulesTestCommonComponentsTestCommonTestCommonClass = CreateVueComponent(GenUniModulesTestCommonComponentsTestCommonTestCommon::class.java, fun(): VueComponentOptions {
-    return VueComponentOptions(type = "component", name = "", inheritAttrs = GenUniModulesTestCommonComponentsTestCommonTestCommon.inheritAttrs, inject = GenUniModulesTestCommonComponentsTestCommonTestCommon.inject, props = GenUniModulesTestCommonComponentsTestCommonTestCommon.props, propsNeedCastKeys = GenUniModulesTestCommonComponentsTestCommonTestCommon.propsNeedCastKeys, emits = GenUniModulesTestCommonComponentsTestCommonTestCommon.emits, components = GenUniModulesTestCommonComponentsTestCommonTestCommon.components, styles = GenUniModulesTestCommonComponentsTestCommonTestCommon.styles, setup = fun(props: ComponentPublicInstance): Any? {
-        return GenUniModulesTestCommonComponentsTestCommonTestCommon.setup(props as GenUniModulesTestCommonComponentsTestCommonTestCommon);
+val GenComponentsKuxPageKuxPageClass = CreateVueComponent(GenComponentsKuxPageKuxPage::class.java, fun(): VueComponentOptions {
+    return VueComponentOptions(type = "component", name = "", inheritAttrs = GenComponentsKuxPageKuxPage.inheritAttrs, inject = GenComponentsKuxPageKuxPage.inject, props = GenComponentsKuxPageKuxPage.props, propsNeedCastKeys = GenComponentsKuxPageKuxPage.propsNeedCastKeys, emits = GenComponentsKuxPageKuxPage.emits, components = GenComponentsKuxPageKuxPage.components, styles = GenComponentsKuxPageKuxPage.styles, setup = fun(props: ComponentPublicInstance): Any? {
+        return GenComponentsKuxPageKuxPage.setup(props as GenComponentsKuxPageKuxPage);
     }
     );
 }
-, fun(instance): GenUniModulesTestCommonComponentsTestCommonTestCommon {
-    return GenUniModulesTestCommonComponentsTestCommonTestCommon(instance);
+, fun(instance): GenComponentsKuxPageKuxPage {
+    return GenComponentsKuxPageKuxPage(instance);
 }
 );
 val GenPagesIndexIndexClass = CreateVueComponent(GenPagesIndexIndex::class.java, fun(): VueComponentOptions {
-    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesIndexIndex.inheritAttrs, inject = GenPagesIndexIndex.inject, props = GenPagesIndexIndex.props, propsNeedCastKeys = GenPagesIndexIndex.propsNeedCastKeys, emits = GenPagesIndexIndex.emits, components = GenPagesIndexIndex.components, styles = GenPagesIndexIndex.styles);
+    return VueComponentOptions(type = "page", name = "", inheritAttrs = GenPagesIndexIndex.inheritAttrs, inject = GenPagesIndexIndex.inject, props = GenPagesIndexIndex.props, propsNeedCastKeys = GenPagesIndexIndex.propsNeedCastKeys, emits = GenPagesIndexIndex.emits, components = GenPagesIndexIndex.components, styles = GenPagesIndexIndex.styles, setup = fun(props: ComponentPublicInstance): Any? {
+        return GenPagesIndexIndex.setup(props as GenPagesIndexIndex);
+    }
+    );
 }
 , fun(instance): GenPagesIndexIndex {
     return GenPagesIndexIndex(instance);
@@ -149,21 +109,21 @@ fun main(app: IApp) {
     (createApp()["app"] as VueApp).mount(app);
 }
 open class UniAppConfig : AppConfig {
-    override var name: String = "debug-kux-pack";
-    override var appid: String = "__UNI__3B5CA8D";
+    override var name: String = "kux-audio-player";
+    override var appid: String = "__UNI__64B44D4";
     override var versionName: String = "1.0.0";
     override var versionCode: String = "100";
-    override var uniCompilerVersion: String = "4.22";
+    override var uniCompilerVersion: String = "4.24";
     constructor(){}
 }
 fun definePageRoutes() {
-    __uniRoutes.push(PageRoute(path = "pages/index/index", component = GenPagesIndexIndexClass, meta = PageMeta(isQuit = true), style = utsMapOf("navigationBarTitleText" to "uni-app x")));
+    __uniRoutes.push(PageRoute(path = "pages/index/index", component = GenPagesIndexIndexClass, meta = PageMeta(isQuit = true), style = utsMapOf("navigationBarTitleText" to "kux-audio-player")));
 }
 val __uniTabBar: Map<String, Any?>? = null;
-val __uniLaunchPage: Map<String, Any?> = utsMapOf("url" to "pages/index/index", "style" to utsMapOf("navigationBarTitleText" to "uni-app x"));
+val __uniLaunchPage: Map<String, Any?> = utsMapOf("url" to "pages/index/index", "style" to utsMapOf("navigationBarTitleText" to "kux-audio-player"));
 fun defineAppConfig() {
     __uniConfig.entryPagePath = "/pages/index/index";
-    __uniConfig.globalStyle = utsMapOf("navigationBarTextStyle" to "black", "navigationBarTitleText" to "uni-app x", "navigationBarBackgroundColor" to "#F8F8F8", "backgroundColor" to "#F8F8F8");
+    __uniConfig.globalStyle = utsMapOf("navigationBarTextStyle" to "black", "navigationBarTitleText" to "kux-audio-player", "navigationBarBackgroundColor" to "#F8F8F8", "backgroundColor" to "#F8F8F8", "backgroundColorContent" to "#F5F5F5");
     __uniConfig.tabBar = __uniTabBar as Map<String, Any>?;
     __uniConfig.conditionUrl = "";
     __uniConfig.uniIdRouter = utsMapOf();
