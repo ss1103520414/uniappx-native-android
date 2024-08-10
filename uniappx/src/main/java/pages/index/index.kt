@@ -44,6 +44,7 @@ open class GenPagesIndexIndex : BasePage {
                 audioPlayer.stop();
             }
             ;
+            console.log(2222, " at pages/index/index.uvue:30");
             return fun(): Any? {
                 return createElementVNode("view", null, utsArrayOf(
                     createElementVNode("button", utsMapOf("style" to normalizeStyle(utsMapOf("margin-bottom" to "30px")), "type" to "primary", "onClick" to onPlay), "开始播放", 4),
