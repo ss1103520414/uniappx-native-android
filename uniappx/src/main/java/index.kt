@@ -1,7 +1,5 @@
 @file:Suppress("UNCHECKED_CAST", "USELESS_CAST", "INAPPLICABLE_JVM_NAME")
-package uni.UNI64B44D4;
-import android.graphics.Color;
-import android.view.View;
+package uni.UNI79D8002;
 import io.dcloud.uniapp.*;
 import io.dcloud.uniapp.extapi.*;
 import io.dcloud.uniapp.framework.*;
@@ -62,7 +60,7 @@ open class GenApp : BaseApp {
             }
         val styles0: Map<String, Map<String, Map<String, Any>>>
             get() {
-                return utsMapOf("uni-row" to padStyleMapOf(utsMapOf("flexDirection" to "row")), "uni-column" to padStyleMapOf(utsMapOf("flexDirection" to "column")), "p-3" to padStyleMapOf(utsMapOf("paddingTop" to 30, "paddingRight" to 30, "paddingBottom" to 30, "paddingLeft" to 30)), "mt-2" to padStyleMapOf(utsMapOf("marginTop" to 20)), "mt-3" to padStyleMapOf(utsMapOf("marginTop" to 30)), "mr-3" to padStyleMapOf(utsMapOf("marginRight" to 30)), "flex" to padStyleMapOf(utsMapOf("display" to "flex")), "flex-row" to padStyleMapOf(utsMapOf("flexDirection" to "row")));
+                return utsMapOf("uni-row" to padStyleMapOf(utsMapOf("flexDirection" to "row")), "uni-column" to padStyleMapOf(utsMapOf("flexDirection" to "column")));
             }
     }
 }
@@ -71,20 +69,6 @@ val GenAppClass = CreateVueAppComponent(GenApp::class.java, fun(): VueComponentO
 }
 , fun(instance): GenApp {
     return GenApp(instance);
-}
-);
-fun hideBottomBar() {
-    UTSAndroid.getUniActivity()!!.getWindow()!!.getDecorView()!!.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-    UTSAndroid.getUniActivity()!!.getWindow()!!.setNavigationBarColor(Color.TRANSPARENT);
-}
-val GenComponentsKuxPageKuxPageClass = CreateVueComponent(GenComponentsKuxPageKuxPage::class.java, fun(): VueComponentOptions {
-    return VueComponentOptions(type = "component", name = "", inheritAttrs = GenComponentsKuxPageKuxPage.inheritAttrs, inject = GenComponentsKuxPageKuxPage.inject, props = GenComponentsKuxPageKuxPage.props, propsNeedCastKeys = GenComponentsKuxPageKuxPage.propsNeedCastKeys, emits = GenComponentsKuxPageKuxPage.emits, components = GenComponentsKuxPageKuxPage.components, styles = GenComponentsKuxPageKuxPage.styles, setup = fun(props: ComponentPublicInstance): Any? {
-        return GenComponentsKuxPageKuxPage.setup(props as GenComponentsKuxPageKuxPage);
-    }
-    );
-}
-, fun(instance): GenComponentsKuxPageKuxPage {
-    return GenComponentsKuxPageKuxPage(instance);
 }
 );
 val GenPagesIndexIndexClass = CreateVueComponent(GenPagesIndexIndex::class.java, fun(): VueComponentOptions {
@@ -109,21 +93,21 @@ fun main(app: IApp) {
     (createApp()["app"] as VueApp).mount(app);
 }
 open class UniAppConfig : AppConfig {
-    override var name: String = "kux-audio-player";
-    override var appid: String = "__UNI__64B44D4";
+    override var name: String = "debug-kux-audio-player";
+    override var appid: String = "__UNI__79D8002";
     override var versionName: String = "1.0.0";
     override var versionCode: String = "100";
     override var uniCompilerVersion: String = "4.24";
     constructor(){}
 }
 fun definePageRoutes() {
-    __uniRoutes.push(PageRoute(path = "pages/index/index", component = GenPagesIndexIndexClass, meta = PageMeta(isQuit = true), style = utsMapOf("navigationBarTitleText" to "kux-audio-player")));
+    __uniRoutes.push(PageRoute(path = "pages/index/index", component = GenPagesIndexIndexClass, meta = PageMeta(isQuit = true), style = utsMapOf("navigationBarTitleText" to "uni-app x")));
 }
 val __uniTabBar: Map<String, Any?>? = null;
-val __uniLaunchPage: Map<String, Any?> = utsMapOf("url" to "pages/index/index", "style" to utsMapOf("navigationBarTitleText" to "kux-audio-player"));
+val __uniLaunchPage: Map<String, Any?> = utsMapOf("url" to "pages/index/index", "style" to utsMapOf("navigationBarTitleText" to "uni-app x"));
 fun defineAppConfig() {
     __uniConfig.entryPagePath = "/pages/index/index";
-    __uniConfig.globalStyle = utsMapOf("navigationBarTextStyle" to "black", "navigationBarTitleText" to "kux-audio-player", "navigationBarBackgroundColor" to "#F8F8F8", "backgroundColor" to "#F8F8F8", "backgroundColorContent" to "#F5F5F5");
+    __uniConfig.globalStyle = utsMapOf("navigationBarTextStyle" to "black", "navigationBarTitleText" to "uni-app x", "navigationBarBackgroundColor" to "#F8F8F8", "backgroundColor" to "#F8F8F8");
     __uniConfig.tabBar = __uniTabBar as Map<String, Any>?;
     __uniConfig.conditionUrl = "";
     __uniConfig.uniIdRouter = utsMapOf();
