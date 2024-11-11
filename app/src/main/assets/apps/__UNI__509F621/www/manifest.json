@@ -1,0 +1,48 @@
+{
+  "id": "__UNI__509F621",
+  "name": "持续定位",
+  "description": "持续定位的APP",
+  "version": {
+    "name": "1.6.5",
+    "code": 10605
+  },
+  "uni-app-x": {
+    "compilerVersion": "4.32"
+  },
+  "app": {
+    "distribute": {
+      "modules": {
+        "uni-getLocation": {
+          "system": {},
+          "tencent": {}
+        },
+        "uni-exit": {},
+        "uni-getSystemInfo": {},
+        "uni-prompt": {},
+        "uni-privacy": {}
+      },
+      "android": {
+        "abiFilters": [
+          "armeabi-v7a",
+          "arm64-v8a",
+          "x86",
+          "x86_64"
+        ],
+        "minSdkVersion": "21",
+        "targetSdkVersion": "32"
+      },
+      "ios": {},
+      "icons": {
+        "ios": {
+          "appstore": "unpackage/res/icons/1024x1024.png"
+        },
+        "android": {
+          "xxhdpi": "unpackage/res/icons/144x144.png",
+          "xxxhdpi": "unpackage/res/icons/192x192.png",
+          "hdpi": "unpackage/res/icons/72x72.png",
+          "xhdpi": "unpackage/res/icons/96x96.png"
+        }
+      }
+    }
+  }
+}
