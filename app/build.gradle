@@ -34,7 +34,7 @@ android {
     signingConfigs {
         config {
             storeFile file("../app/debug.keystore")
-            storePassword "adminadmindebug"
+            storePassword "linbin.java@gmail.com"
             keyAlias "androiddebugkey"
             keyPassword "adminadmindebug"
         }

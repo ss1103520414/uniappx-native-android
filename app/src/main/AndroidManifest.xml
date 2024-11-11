@@ -9,6 +9,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <meta-data android:name="DCLOUD_DEBUG" android:value="true"/>
+        <meta-data android:name="DCLOUD_DEBUG" android:value="false"/>
     </application>
 </manifest>
